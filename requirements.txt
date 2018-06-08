@@ -1,1 +1,3 @@
 Flask
+python3-pymongo
+python3-pymongo-gridfs
