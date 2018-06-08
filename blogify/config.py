@@ -14,7 +14,7 @@ class Config(object):
     PRODUCTION = False
     SHOW_DB_URI = False
     SECRET_KEY = 'replace-me-with-something-random'
-
+    MONGO_URI = 'mongodb://<username>:<password>@localhost/blogify_db'
 
 class ProdConfig(Config):
     DEBUG = False
@@ -22,6 +22,8 @@ class ProdConfig(Config):
 
 
 class DevConfig(Config):
+    MONGO_DBNAME = 'blogify_db'
+    MONGO_URI = 'mongodb://<username>:<password>@localhost/blogify_db'
     pass
 
 class TestConfig(Config):

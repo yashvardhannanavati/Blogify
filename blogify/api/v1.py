@@ -5,10 +5,11 @@ from __future__ import unicode_literals
 from flask import jsonify, Blueprint
 
 from blogify import version
+from blogify.databases import client
 
 
 api_v1 = Blueprint('api_v1', __name__)
-
+db = client.blogify_db
 
 @api_v1.route('/about')
 def about():
